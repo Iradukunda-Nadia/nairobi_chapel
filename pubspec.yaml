@@ -26,7 +26,7 @@ dependencies:
   image_picker:
   video_player: ^0.7.2
   firebase_storage: ^3.0.0
-  cloud_firestore: 
+  cloud_firestore:
   chewie: ^0.9.7
   video_thumbnail: ^0.2.0
   thumbnails: ^1.0.1
