@@ -35,7 +35,7 @@ dependencies:
   shared_preferences: ^0.4.3
   firebase_auth: any
   wakelock:
-  flutter_webview_plugin:
+  flutter_webview_plugin: any
 
 dev_dependencies:
   flutter_test:
