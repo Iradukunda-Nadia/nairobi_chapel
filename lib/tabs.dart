@@ -10,6 +10,8 @@ import 'package:nairobi_chapel/give.dart';
 import 'package:nairobi_chapel/home.dart';
 import 'package:nairobi_chapel/loginUI/baseAuth.dart';
 import 'package:nairobi_chapel/loginUI/login.dart';
+import 'package:nairobi_chapel/payment.dart';
+import 'package:nairobi_chapel/player_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:ui';
 
@@ -100,7 +102,7 @@ class _tabViewState extends State<tabView> with SingleTickerProviderStateMixin {
 
       body: new TabBarView(
         // Add tabs as widgets
-        children: <Widget>[new Home(),  new events(), new Giving(), new Connect(), new Construction(),],
+        children: <Widget>[new Connect(),  new events(), new Home(), new Payment(), new Audio(),],
         // set the controller
         controller: controller,
       ),
@@ -110,26 +112,27 @@ class _tabViewState extends State<tabView> with SingleTickerProviderStateMixin {
         color: Colors.white,
         // set the tab bar as the child of bottom navigation bar
         child: new TabBar(
-          labelStyle: TextStyle(fontSize: 10),
+          labelStyle: TextStyle(fontSize: 11.0, fontWeight: FontWeight.w700, fontFamily: "Handlee"),
           indicatorWeight: 5.0,
           unselectedLabelColor: Colors.grey,
           labelColor: Colors.black,
+          unselectedLabelStyle: TextStyle(fontSize: 7.0),
           tabs: <Tab>[
             new Tab(
-              text: 'Sermons',// set icon to the tab
-              icon: new Icon(Icons.change_history),
+              text: 'Connect',// set icon to the tab
+              icon: new Icon(Icons.group),
             ),
             new Tab(
               text: 'Events',
               icon: new Icon(Icons.date_range),
             ),
             new Tab(
-              text: 'Giving',
-              icon: new Icon(Icons.attach_money),
+              text: 'Sermon',
+              icon: new Icon(Icons.change_history),
             ),
             new Tab(
-              text: 'Connect',
-              icon: new Icon(Icons.group),
+              text: 'Giving',
+              icon: new Icon(Icons.attach_money),
             ),
             new Tab(
               text: 'Profile',

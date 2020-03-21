@@ -24,8 +24,9 @@ class _ConnectState extends State<Connect> {
                         onTap: (){},
                         child: new Card(
                           elevation:8,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                            borderRadius: BorderRadius.circular(10.0),
                           ),
                           child: Column(
                             children: <Widget>[
@@ -35,10 +36,13 @@ class _ConnectState extends State<Connect> {
                                   new Container(
                                     width: MediaQuery.of(context).size.width * 0.95,
                                     height: MediaQuery.of(context).size.height * 0.2,
-                                    decoration: new BoxDecoration(
-                                        image: new DecorationImage(
-                                            fit: BoxFit.cover,
-                                            image: new NetworkImage(doc.data["image"]))
+
+                                    child: Container(
+                                      decoration: new BoxDecoration(
+                                          image: new DecorationImage(
+                                              fit: BoxFit.cover,
+                                              image: new NetworkImage(doc.data["image"]))
+                                      ),
                                     ),
 
                                   ),
@@ -64,9 +68,11 @@ class _ConnectState extends State<Connect> {
                                                   color: Colors.black),),
                                             new Text("${doc.data["desc"]}",
                                               maxLines: 2,
+                                              overflow: TextOverflow.ellipsis,
+                                              textAlign: TextAlign.center,
                                               style: new TextStyle(
                                                   fontSize: 16.0,
-                                                  color: Colors.grey),),
+                                                  color: Colors.black87),),
 
                                           ],
                                         ),
